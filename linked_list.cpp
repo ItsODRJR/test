@@ -5,7 +5,7 @@
 using std::cout, std::endl, std::string, std::ostream;
 
 void MyList::add(Student) {
-    MyNode* n = new MyNode(Student, nullptr, nullptr);
+    MyNode* n = new MyNode{Student, nullptr, nullptr};
 
     if (_head == nullptr) {
         _head = n;
@@ -77,7 +77,7 @@ bool MyList::insert(Student, size_t) {
     }
 
     if (index == 0) {
-        MyNode* node = new MyNode(student, _head, nullptr);
+        MyNode* node = new MyNode{student, _head, nullptr};
         if (_head) {
             _head->previous = node;
         }
