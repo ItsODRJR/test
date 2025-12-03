@@ -4,8 +4,8 @@
 
 using std::cout, std::endl, std::string, std::ostream;
 
-void MyList::add(Student) {
-    MyNode* n = new MyNode{Student, nullptr, nullptr};
+void MyList::add(Student student) {
+    MyNode* n = new MyNode{student, nullptr, nullptr};
 
     if (_head == nullptr) {
         _head = n;
@@ -34,7 +34,7 @@ void MyList::clear() {
     _size = 0;
 }
 
-bool MyList::remove(const Student&) {
+bool MyList::remove(const Student& student) {
     MyNode* curr = _head;
 
     while (curr != nullptr) {
@@ -66,7 +66,7 @@ bool MyList::remove(const Student&) {
     return false;
 }
 
-bool MyList::insert(Student, size_t) {
+bool MyList::insert(Student student, size_t index) {
     if (index > _size) { 
         return false;
     }
