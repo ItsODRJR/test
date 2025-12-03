@@ -94,7 +94,7 @@ bool MyList::insert(Student student, size_t index) {
         curr = curr->next;
     }
 
-    MyNode* node = new MyNode(student, curr, curr->previous);
+    MyNode* node = new MyNode{student, curr, curr->previous};
 
     curr->previous->next = node;
     curr->previous = node;
