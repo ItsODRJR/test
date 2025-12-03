@@ -11,7 +11,7 @@ void MyList::add(Student student) {
         _head = n;
         _tail = n;
     } else {
-        node->previous = _tail;
+        n->previous = _tail;
         _tail->next = n;
         _tail = n;
     }
